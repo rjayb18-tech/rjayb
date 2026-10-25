@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Business automation, Power Platform solutions, and data-driven insights.">
+  <title>Your Name | Power Platform Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #101923;
+      --panel: #182532;
+      --text: #f3f6fa;
+      --muted: #a9b7c6;
+      --accent: #9bc8ff;
+      --border: #30404f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover { color: var(--accent); }
+
+    .hero {
+      padding: 100px 0 85px;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 20px 0;
+    }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: -0.8px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 650px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 19px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #101923;
+      border-color: var(--accent);
+    }
+
+    section { padding: 55px 0; }
+
+    .section-intro {
+      color: var(--muted);
+      margin-top: -10px;
+      max-width: 600px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .number {
+      color: var(--accent);
+      font-size: 12px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .card h3 { margin: 14px 0 8px; }
+
+    .card p, .about p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 4px 8px;
+      color: #c6d7e9;
+      font-size: 11px;
+    }
+
+    .about {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: #131f2b;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      border-radius: 7px;
+      font-size: 13px;
+    }
+
+    .contact { padding-bottom: 75px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 700px) {
+      nav { align-items: flex-start; padding: 20px 0; }
+      nav a { margin: 0 0 0 12px; }
+      .hero { padding: 70px 0 55px; }
+      .projects { grid-template-columns: 1fr; }
+      h1 { letter-spacing: -1px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <div class="brand">YOUR NAME<span style="color:#9bc8ff">.</span></div>
+      <div>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="hero">
+        <div class="eyebrow">Business Automation · Power Platform · Analytics</div>
+
+        <h1>Turning complex business processes into practical solutions.</h1>
+
+        <p class="intro">
+          I design applications, automate workflows, and transform operational
+          data into actionable insights. My focus is on making work simpler,
+          improving process efficiency, and building solutions that scale.
+        </p>
+
+        <div class="actions">
+          <a class="button primary" href="#projects">Explore my projects ↓</a>
+          <a class="button" href="#contact">Let's connect</a>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="eyebrow">Selected work</div>
+        <h2>Solutions built around real business problems.</h2>
+        <p class="section-intro">
+          Explore application concepts inspired by common enterprise workflows.
+          Interactive demonstrations are coming soon.
+        </p>
+
+        <div class="projects">
+          <article class="card">
+            <div class="number">01 / WORKFLOW</div>
+            <h3>Assessment Workflow</h3>
+            <p>
+              A structured assessment experience with form validation,
+              recommendations, and status tracking.
+            </p>
+            <div class="tags">
+              <span class="tag">Power Apps</span>
+              <span class="tag">SharePoint</span>
+              <span class="tag">Approvals</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="number">02 / OPERATIONS</div>
+            <h3>Exception Management</h3>
+            <p>
+              An operational tracking concept for prioritizing exceptions,
+              managing ownership, and monitoring resolution.
+            </p>
+            <div class="tags">
+              <span class="tag">Power Apps</span>
+              <span class="tag">Power Automate</span>
+              <span class="tag">Controls</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="number">03 / ANALYTICS</div>
+            <h3>Executive Metrics Scorecard</h3>
+            <p>
+              An analytics concept for exploring performance indicators,
+              identifying trends, and supporting decisions.
+            </p>
+            <div class="tags">
+              <span class="tag">Power BI</span>
+              <span class="tag">KPIs</span>
+              <span class="tag">Analytics</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="eyebrow">What I do</div>
+        <h2>Technology with a business purpose.</h2>
+        <p class="section-intro">
+          I combine process understanding, solution design, and automation
+          to help organizations reduce manual effort and improve visibility.
+        </p>
+
+        <div class="skills">
+          <span class="skill">Power Apps</span>
+          <span class="skill">Power Automate</span>
+          <span class="skill">Power BI</span>
+          <span class="skill">SharePoint</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Workflow Design</span>
+          <span class="skill">Process Improvement</span>
+          <span class="skill">Business Execution</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Let's build something meaningful.</h2>
+        <p class="section-intro">
+          Interested in workflow automation, business applications,
+          or solving a complex operational challenge? Let's connect.
+        </p>
+
+        <div class="actions">
+          <a class="button primary"
+             href="https://www.linkedin.com/"
+             target="_blank"
+             rel="noopener noreferrer">
+            Connect on LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Your Name · Independent portfolio and demonstrations.
+    </div>
+  </footer>
+</body>
+</html>
