@@ -4,341 +4,457 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Business automation, Power Platform solutions, and data-driven insights.">
-  <title>R-jay Banaglorioso | Power Platform Portfolio</title>
+  <meta name="description" content="R-jay D. Banaglorioso — Business Execution, Power Platform, Workflow Automation, and Analytics Portfolio.">
+  <title>R-jay D. Banaglorioso | Portfolio</title>
 
   <style>
     :root {
-      --bg: #101923;
-      --panel: #182532;
-      --text: #f3f6fa;
-      --muted: #a9b7c6;
-      --accent: #9bc8ff;
-      --border: #30404f;
+      --bg: #0b1120;
+      --panel: #131c2e;
+      --text: #f1f5f9;
+      --muted: #a3afc2;
+      --accent: #5eead4;
+      --border: #283449;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
-      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
-      width: min(1080px, 90%);
+      width: min(1100px, 90%);
       margin: auto;
     }
 
     header {
       border-bottom: 1px solid var(--border);
+      padding: 20px 0;
     }
 
     nav {
-      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
     }
 
-    .brand {
-      font-weight: 700;
-      letter-spacing: 1px;
+    .logo {
+      font-size: 1.05rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
     }
 
-    nav a {
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
       color: var(--muted);
-      text-decoration: none;
-      margin-left: 20px;
-      font-size: 14px;
+      font-size: 0.9rem;
     }
 
-    nav a:hover { color: var(--accent); }
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
     .hero {
       padding: 100px 0 85px;
-      max-width: 800px;
+      max-width: 850px;
     }
 
     .eyebrow {
       color: var(--accent);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
       text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(38px, 6vw, 64px);
-      line-height: 1.1;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.12;
       letter-spacing: -2px;
-      margin: 20px 0;
+      margin-bottom: 24px;
     }
 
-    h2 {
-      font-size: 30px;
-      letter-spacing: -0.8px;
+    h1 span {
+      color: var(--accent);
     }
 
-    .intro {
+    .hero p {
       color: var(--muted);
-      font-size: 18px;
-      max-width: 650px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 30px;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-bottom: 30px;
     }
 
     .button {
       display: inline-block;
-      padding: 12px 19px;
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    .button.primary {
       background: var(--accent);
-      color: #101923;
-      border-color: var(--accent);
+      color: #09201e;
+      font-weight: bold;
+      padding: 12px 22px;
+      border-radius: 6px;
+      margin: 0 10px 10px 0;
+      transition: transform 0.2s;
     }
 
-    section { padding: 55px 0; }
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    section {
+      padding: 65px 0;
+      scroll-margin-top: 20px;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
 
     .section-intro {
       color: var(--muted);
-      margin-top: -10px;
-      max-width: 600px;
+      margin-bottom: 30px;
+      max-width: 700px;
     }
 
     .projects {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 28px;
+      gap: 20px;
     }
 
     .card {
       background: var(--panel);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 24px;
+      padding: 25px;
+      transition: border-color 0.2s, transform 0.2s;
     }
 
-    .number {
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .card-number {
       color: var(--accent);
-      font-size: 12px;
-      letter-spacing: 1px;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
-    .card h3 { margin: 14px 0 8px; }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
 
-    .card p, .about p {
+    .card p {
       color: var(--muted);
-      font-size: 14px;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 18px;
+      gap: 8px;
     }
 
     .tag {
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      padding: 4px 8px;
-      color: #c6d7e9;
-      font-size: 11px;
+      font-size: 0.75rem;
+      color: var(--accent);
+      border: 1px solid #31524f;
+      background: #102725;
+      padding: 4px 9px;
+      border-radius: 20px;
     }
 
-    .about {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: #131f2b;
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
     .skills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 20px;
     }
 
     .skill {
+      padding: 10px 14px;
       background: var(--panel);
       border: 1px solid var(--border);
-      padding: 10px 14px;
       border-radius: 7px;
-      font-size: 13px;
+      font-size: 0.9rem;
     }
 
-    .contact { padding-bottom: 75px; }
+    .contact-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 35px;
+    }
+
+    .contact-panel p {
+      color: var(--muted);
+      margin: 12px 0 24px;
+    }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 24px 0;
+      padding: 25px 0;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 0.85rem;
     }
 
-    @media (max-width: 700px) {
-      nav { align-items: flex-start; padding: 20px 0; }
-      nav a { margin: 0 0 0 12px; }
-      .hero { padding: 70px 0 55px; }
-      .projects { grid-template-columns: 1fr; }
-      h1 { letter-spacing: -1px; }
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 800px) {
+      .projects {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 70px 0 55px;
+      }
+
+      h1 {
+        letter-spacing: -1px;
+      }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 45px 0;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <nav class="container">
-      <div class="brand">R-jay D. Banaglorioso<span style="color:#9bc8ff"></span></div>
-      <div>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <a class="logo" href="#home">R-jay<span>.</span></a>
+
+        <div class="nav-links">
+          <a href="#projects">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="container">
-      <section class="hero">
-        <div class="eyebrow">Business Automation · Power Platform · Analytics</div>
+    <section class="container hero" id="home">
+      <div class="eyebrow">Business Execution · Automation · Analytics</div>
 
-        <h1>Turning complex business processes into practical solutions.</h1>
+      <h1>
+        Turning complex business processes into
+        <span>practical solutions.</span>
+      </h1>
 
-        <p class="intro">
-          I design applications, automate workflows, and transform operational
-          data into actionable insights. My focus is on making work simpler,
-          improving process efficiency, and building solutions that scale.
-        </p>
+      <p>
+        I'm R-jay D. Banaglorioso, a business execution and automation
+        professional with 15+ years of experience. I use technology,
+        workflow automation, and data-driven insights to simplify
+        operations and help teams work smarter.
+      </p>
 
-        <div class="actions">
-          <a class="button primary" href="#projects">Explore my projects ↓</a>
-          <a class="button" href="#contact">Let's connect</a>
-        </div>
-      </section>
+      <a class="button" href="#projects">Explore My Projects</a>
+      <a class="button button-secondary"
+         href="https://www.linkedin.com/"
+         target="_blank"
+         rel="noopener noreferrer">Connect on LinkedIn</a>
+    </section>
 
-      <section id="projects">
-        <div class="eyebrow">Selected work</div>
-        <h2>Solutions built around real business problems.</h2>
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-heading">Selected Projects</h2>
+
         <p class="section-intro">
-          Explore application concepts inspired by common enterprise workflows.
-          Interactive demonstrations are coming soon.
+          A selection of workflow, automation, and analytics concepts
+          inspired by real business challenges. Interactive demos and
+          detailed case studies will be added as this portfolio evolves.
         </p>
 
         <div class="projects">
           <article class="card">
-            <div class="number">01 / WORKFLOW</div>
+            <div class="card-number">PROJECT 01</div>
             <h3>Assessment Workflow</h3>
             <p>
-              A structured assessment experience with form validation,
-              recommendations, and status tracking.
+              A structured assessment experience designed to replace
+              disconnected spreadsheets, improve tracking, and give
+              stakeholders clearer visibility into progress.
             </p>
             <div class="tags">
               <span class="tag">Power Apps</span>
               <span class="tag">SharePoint</span>
-              <span class="tag">Approvals</span>
+              <span class="tag">Workflow</span>
             </div>
           </article>
 
           <article class="card">
-            <div class="number">02 / OPERATIONS</div>
+            <div class="card-number">PROJECT 02</div>
             <h3>Exception Management</h3>
             <p>
-              An operational tracking concept for prioritizing exceptions,
-              managing ownership, and monitoring resolution.
+              A centralized concept for recording issues, assigning
+              ownership, tracking actions, and improving accountability
+              through a consistent workflow.
             </p>
             <div class="tags">
               <span class="tag">Power Apps</span>
-              <span class="tag">Power Automate</span>
-              <span class="tag">Controls</span>
+              <span class="tag">Process Design</span>
+              <span class="tag">Automation</span>
             </div>
           </article>
 
           <article class="card">
-            <div class="number">03 / ANALYTICS</div>
+            <div class="card-number">PROJECT 03</div>
             <h3>Executive Metrics Scorecard</h3>
             <p>
-              An analytics concept for exploring performance indicators,
-              identifying trends, and supporting decisions.
+              A dashboard concept that brings key performance indicators,
+              trends, and management insights together to support
+              informed business decisions.
             </p>
             <div class="tags">
               <span class="tag">Power BI</span>
-              <span class="tag">KPIs</span>
               <span class="tag">Analytics</span>
+              <span class="tag">DAX</span>
             </div>
           </article>
-        </div>
-      </section>
-    </div>
-
-    <section id="about" class="about">
-      <div class="container">
-        <div class="eyebrow">What I do</div>
-        <h2>Technology with a business purpose.</h2>
-        <p class="section-intro">
-          I combine process understanding, solution design, and automation
-          to help organizations reduce manual effort and improve visibility.
-        </p>
-
-        <div class="skills">
-          <span class="skill">Power Apps</span>
-          <span class="skill">Power Automate</span>
-          <span class="skill">Power BI</span>
-          <span class="skill">SharePoint</span>
-          <span class="skill">SQL</span>
-          <span class="skill">Workflow Design</span>
-          <span class="skill">Process Improvement</span>
-          <span class="skill">Business Execution</span>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="eyebrow">Get in touch</div>
-        <h2>Let's build something meaningful.</h2>
-        <p class="section-intro">
-          Interested in workflow automation, business applications,
-          or solving a complex operational challenge? Let's connect.
-        </p>
+    <section id="about">
+      <div class="container about-layout">
+        <div class="about-copy">
+          <h2 class="section-heading">About Me</h2>
 
-        <div class="actions">
-          <a class="button primary"
-             href="https://www.linkedin.com/in/r-jay-banaglorioso-154641169/"
+          <p>
+            I specialize in identifying operational friction and turning
+            it into practical, scalable solutions. My work combines
+            business process understanding, automation, reporting, and
+            continuous improvement.
+          </p>
+
+          <p>
+            My approach is simple: understand the problem, design a
+            solution that people can use, and make the results measurable.
+            This portfolio is also a place where I explore new ideas
+            and build independent, interactive demonstrations.
+          </p>
+        </div>
+
+        <div>
+          <h3 style="margin-bottom: 18px;">Tools &amp; Skills</h3>
+
+          <div class="skills">
+            <span class="skill">Power Apps</span>
+            <span class="skill">Power Automate</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">SharePoint</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Alteryx</span>
+            <span class="skill">Process Improvement</span>
+            <span class="skill">Business Analysis</span>
+            <span class="skill">HTML &amp; CSS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <h2 class="section-heading">Let's Connect</h2>
+
+          <p>
+            Interested in workflow automation, business execution,
+            analytics, or practical technology solutions? Let's connect.
+          </p>
+
+          <!-- Replace the placeholder URL with your LinkedIn profile. -->
+          <a class="button"
+             href="https://www.linkedin.com/"
              target="_blank"
-             rel="noopener noreferrer">
-            Connect on LinkedIn ↗
-          </a>
+             rel="noopener noreferrer">Find Me on LinkedIn</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 R-jay Banaglorioso · Independent portfolio and demonstrations.
+    <div class="container footer-content">
+      <span>© <span id="year">2026</span> R-jay D. Banaglorioso</span>
+      <span>Built with HTML &amp; CSS · Hosted on GitHub Pages</span>
     </div>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 </body>
 </html>
